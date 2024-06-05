@@ -1,0 +1,6 @@
+Spring Boot project > LogKey
+
+"com.test.logkey.controller" > "UserController.java"
+"com.test.logkey.dto" > "UserDTO.java"
+"com.test.logkey.entity" > "User"
+"com.test.logkey.repository" > "UserRepository"
