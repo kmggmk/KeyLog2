@@ -13,11 +13,15 @@ import lombok.*;
 @NoArgsConstructor
 public class User {
 
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq_generator")
-    @SequenceGenerator(name = "user_seq_generator", sequenceName = "seqUser", allocationSize = 1)
+
+    @GeneratedValue(strategy = GenerationType.)
     @Id
     @Column(name = "id")
     private String id;
+
+
+    @Column(name = "seq")
+    private int seq;
 
     @Column(name = "password")
     private String password;

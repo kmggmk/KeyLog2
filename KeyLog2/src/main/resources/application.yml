@@ -14,6 +14,7 @@ spring:
         database: oracle
         generate-ddl: false
         hibernate:
+            dialect: org.hibernate.dialect.Oracle11cDialect
             ddl-auto: none
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

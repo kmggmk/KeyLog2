@@ -28,6 +28,7 @@ public class SecurityConfig {
 //                .requestMatchers("/login").permitAll()
 //                .requestMatchers("/loginok").permitAll()
                         .requestMatchers("/index", "/login").permitAll()
+                        .requestMatchers("/join", "/joinok").permitAll()
                         .anyRequest().authenticated() //나머지 경로 > 인증 사용자에게만 허가
         );
         return http.build();

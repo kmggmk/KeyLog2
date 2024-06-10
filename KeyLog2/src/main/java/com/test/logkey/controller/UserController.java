@@ -1,25 +1,43 @@
 package com.test.logkey.controller;
 
+import com.test.logkey.dto.UserDTO;
 import com.test.logkey.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Optional;
+
 
 @Controller
 @RequiredArgsConstructor
 public class UserController {
-    private final UserRepository userRepository;
 
-    @GetMapping("/index")
-    public String index(Model model) {
-        //C[R]UD
-        //- 1개의 레코드 가져오기
+    private final com.test.logkey.controller.UserService userService;
 
-        model.addAttribute("user", userRepository.findById("user01"));
-        return "index";
+    @GetMapping(value="/join")
+    public String join(){
+
+        return "join";
+    }
+
+    @PostMapping(value="/joinok")
+    public String joinok(UserDTO userDTO){
+
+        System.out.println("dto >>>>>>>>>>>>>> " + userDTO);
+
+        userService.join(userDTO);
+
+        return "redirect:/login";
+    }
+
+    @GetMapping(value="/my")
+    public String my(){
+
+        //회원만
+
+        return "my";
     }
 
 }

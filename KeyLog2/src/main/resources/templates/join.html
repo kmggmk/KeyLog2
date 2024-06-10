@@ -9,26 +9,33 @@
     <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
 </head>
 <body>
-<div th:replace="~{inc/header :: menu}"></div>
-<h2>Join</h2>edf
+
+<h2>Join</h2>
 <form method="POST" action="/joinok">
     <table>
         <tr>
             <th>아이디</th>
-            <td><input type="text" name="username" required></td>
+            <td><input type="text" name="id" required></td>
         </tr>
         <tr>
             <th>암호</th>
             <td><input type="password" name="password" required></td>
         </tr>
         <tr>
-            <th>권한</th>
-            <td>
-                <select name="role">
-                    <option value="ROLE_MEMBER">일반회원</option>
-                    <option value="ROLE_ADMIN">관리자</option>
-                </select>
-            </td>
+            <th>이름</th>
+            <td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <th>닉네임</th>
+            <td><input type="text" name="nickName" required></td>
+        </tr>
+        <tr>
+            <th>전화번호</th>
+            <td><input type="text" name="tel" required></td>
+        </tr>
+        <tr>
+            <th>주소</th>
+            <td><input type="text" name="address" required></td>
         </tr>
     </table>
     <div>
